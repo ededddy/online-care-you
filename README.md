@@ -1,3 +1,21 @@
+# Online Care You
+
+This Vue 3 app is created to express care to others, sharing function is completed by user, cause I am too lazy to implement it/
+
+# To host it yourself
+
+```sh
+cd online-care-you &&
+yarn install &&
+yarn build && yarn serve
+```
+
+Dev mode:
+
+```sh
+yarn dev
+```
+
 # Vue 3 + Typescript + Vite
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
