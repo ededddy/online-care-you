@@ -5,4 +5,10 @@ declare module '*.vue' {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
   const component: DefineComponent<{}, {}, any>
   export default component
+
+}
+
+declare module 'dom-to-image-more' {
+  import domToImage = require('dom-to-image');
+  export = domToImage;
 }

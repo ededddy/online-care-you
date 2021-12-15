@@ -1,19 +1,28 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import domtoimage from "dom-to-image-more";
+
 import { saveAs } from "file-saver";
+import domtoimage from "dom-to-image-more";
+//import { useMobileDetection } from "vue3-mobile-detection";
+
 export default defineComponent({
   props: { name: String, target: String},
   methods : {
-    onCapture (evt) {
-      evt.preventDefault();
+    onCapture () {
       const capture = this.$refs.capture;
-      domtoimage.toBlob(capture)
-        .then(function(blob) {
+      domtoimage.toBlob(capture as Node)
+        .then(function(blob: any) {
           saveAs(blob, `online-care.png`)
         });
     },
-  }
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
 });
 </script>
 
@@ -27,7 +36,7 @@ export default defineComponent({
       </span>
     </h1>
   </div>
-  <n-button type="primary" size="large" @click="onCapture" :disabled="!this.$isMobile()">
+  <n-button type="primary" size="large" @click="onCapture" :disabled="!isMobile()">
       立即截圖分享!
   </n-button>
 </template>

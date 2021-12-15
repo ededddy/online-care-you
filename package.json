@@ -9,11 +9,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@types/dom-to-image": "^2.6.4",
     "@types/file-saver": "^2.0.4",
     "dom-to-image-more": "^2.9.5",
     "file-saver": "^2.0.5",
-    "vue": "^3.2.16",
-    "vue-mobile-detection": "^2.0.1"
+    "vue": "^3.2.16"
   },
   "devDependencies": {
     "@vicons/ionicons5": "^0.11.0",
