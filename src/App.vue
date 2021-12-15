@@ -19,7 +19,7 @@ export default defineComponent({
   }, 
   data () { 
     return {name: "", target: ""}
-  }, 
+  } 
 })
 </script>
 
@@ -41,8 +41,8 @@ export default defineComponent({
           </n-icon>
         </template>
       </n-input>
-      <Care v-if="name && target" :target="target" :name="name"/>
     </n-space>
+    <Care v-if="name && target" :target="target" :name="name"/>
   </n-config-provider>
 </template>
 
